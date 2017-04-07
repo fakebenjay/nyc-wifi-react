@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const AnyReactComponent = ({ text }) => <h1>{text}</h1>;
 
 class SimpleMap extends Component {
   static defaultProps = {
-    center: {lat: 59.95, lng: 30.33},
-    zoom: 11
+    center: {lat: 52, lng: 0},
+    zoom: 6
   };
 
   render() {
@@ -16,9 +16,9 @@ class SimpleMap extends Component {
         defaultZoom={this.props.zoom}
       >
         <AnyReactComponent
-          lat={59.955413}
-          lng={30.337844}
-          text={'Kreyser Avrora'}
+          lat={this.props.center.lat}
+          lng={this.props.center.lng}
+          text={'MOTHER ENGLAND'}
         />
       </GoogleMapReact>
     );
