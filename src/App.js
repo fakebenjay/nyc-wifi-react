@@ -4,6 +4,13 @@ import SimpleMap from './simpleMap';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      hotspots: []
+    }
+  }
+
   render() {
     return (
       <div className="App">

@@ -12,15 +12,19 @@ class SimpleMap extends Component {
   render() {
     return (
       <GoogleMapReact
+        google={window.google}
         defaultCenter={this.props.center}
         defaultZoom={this.props.zoom}
+        bootstrapURLKeys={{
+          key: 'HIDDEN KEY'
+        }}
       >
         <AnyReactComponent
           lat={this.props.center.lat}
           lng={this.props.center.lng}
           text={'MOTHER ENGLAND'}
         />
-      </GoogleMapReact>
+      </GoogleMapReact >
     );
   }
 }
